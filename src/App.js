@@ -1,23 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import Counter from './components/counter';
+import Accordion from './components/accordion';
+
+const items = [
+  { title: 'item 1', description: 'one' },
+  { title: 'item 2', description: 'two' },
+  { title: 'item 3', description: 'three' },
+]
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <div className="demo-item">
+        <Counter />
+      </div>
+      <div className="demo-item">
+        <Accordion items={items} />
+      </div>
       </header>
     </div>
   );
